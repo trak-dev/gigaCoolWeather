@@ -1,0 +1,37 @@
+<main>
+   <div id="searchBar"><input type="text" placeholder="entrez une ville" [(ngModel)]="search" (keypress)="editUser($event)"></div> 
+
+    <section *ngIf="weather">
+    <article id="left">
+        <div id="gradient">
+            <div id="top">
+                <h2 class="title">{{day}}</h2>
+                <p class="text">{{now}}</p>
+                <p class="text last">{{weather.name}}, {{weather.sys.country}}</p>
+            </div>
+            <div id="bottom">
+                <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}.png">
+                <p id="temperature">{{weather.main.temp}}°C</p>
+                <p class="text">{{weather.weather[0].description}}</p>
+            </div>
+        </div>
+
+    </article>
+    <article id="right">
+        <div id="toptwo">
+            <span>
+                <h3>COUCHER DE SOLEIL</h3>
+                <p>{{weather.sys.sunset}}</p>
+            </span>
+            <span>
+                <h3>HUMIDITY</h3>
+                <p>{{weather.main.humidity}} %</p>
+            </span>
+            <span>
+                <h3>WIND</h3>
+                <p>{{weather.wind.speed}} km/h</p>
+            </span>
+        </div>
+    </article>
+</section>
+</main>

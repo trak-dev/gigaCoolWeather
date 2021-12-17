@@ -1,0 +1,40 @@
+header {
+    width: 100vw;
+    height: 10vh;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        font-weight: bold;
+        font-size: 2.6em;
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    div {
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    }
+}
+main {
+    width: 100vw;
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
